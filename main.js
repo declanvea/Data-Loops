@@ -65,31 +65,36 @@ function question4 () {
 // 5: Which items are made of eight or more materials?
 //    Display the name, number of items and the items it is made of.
 function question5 () {
-//   let Multiple = [];
-//   let count = 0;
-//   for (let i = 0; i < data.length; i++){
-//     if (data[i].materials.length >= 8){
-//       Multiple.push(data[i].title);
-//     }
-//     for (let j = 0; j < data.length; j++){
-//       if (data[j].materials.length >= 8){
-//         (" has " + count(data[j].materials) + " materials:");
-//       }
-//     }
-//   }
-//   console.log(Multiple);
-//   console.log(count);
+  let Multiple = [];
+  let count = 0;
+  let items = [];
+  for (let i = 0; i < data.length; i++){
+    if (data[i].materials.length >= 8){
+      Multiple.push(data[i].title);
+    }
+  }
+  // console.log(Multiple);
+
+    for (let u = 0; u < data.length; u++){
+      if (data[u].materials.length >= 8){
+        items.push(data[u].materials);
+        count++;
+      }
+    }
+      // console.log(items);
+
+  console.log(`${Multiple} has ${count} materials: ${items} `);
 }
 
 
 // 6: How many items were made by their sellers?
 // Answer:
 function question6 () {
-  let Entr = [];
+  let total = 0;
   for (let i = 0; i < data.length; i++){
     if (data[i].who_made === "i_did"){
-      Entr.push(data[i].title);
+      total++;
     }
   }
-  console.log(Entr.count + " items were made by their sellers.");
+  console.log(`${total} items were made by their sellers.`);
 }
