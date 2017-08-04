@@ -26,39 +26,33 @@ function question1 () {
 
 function question2 () {
 
-  let range = [];
 
   for (let i = 0; i < data.length; i++){
     if (data[i].price >= 14 && data[i].price <= 18){
-      range.push(data[i].title);
+      console.log(data[i].title);
     }
   }
-  console.log(range);
 }
 
 
 
 // 3: Which item has a "GBP" currency code? Display it's name and price.
 function question3 () {
-  let Unique = [];
   for (let i = 0; i < data.length; i++){
     if (data[i].currency_code === "GBP"){
-      Unique.push(data[i].title);
+      console.log(`${data[i].title} costs ${data[i].price} pounds.`);
     }
   }
-  console.log(Unique);
 }
 
 
 // 4: Display a list of all items who are made of wood.
 function question4 () {
-  let Single = [];
   for (let i = 0; i < data.length; i++){
     if (data[i].materials.includes("wood")){
-      Single.push(data[i].title);
+      console.log(data[i].title);
     }
   }
-  console.log(Single);
 }
 
 
