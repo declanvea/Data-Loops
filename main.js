@@ -82,3 +82,5 @@ function question6 () {
   }
   console.log(`${total} items were made by their sellers.`);
 }
+
+/////
